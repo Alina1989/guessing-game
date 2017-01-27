@@ -6,8 +6,8 @@ class GuessingGame {
 
     setRange(min, max) {
         this.item = (min+max)/2
-            this.left = min;
-        this.right = max;
+        this.left = min+1;
+        this.right = max-1;
 
     }
 
@@ -15,11 +15,11 @@ class GuessingGame {
 return this.item;
     }
 
-    lower() { this.left this.item
+    lower() { this.setRange (this.left, this.item)
 
     }
 
-    greater() { this.item this.right
+    greater() { this.setRange(this.item, this.right)
 
     }
 }
