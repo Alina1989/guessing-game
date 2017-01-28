@@ -1,6 +1,6 @@
 class GuessingGame {
     constructor() {
-    this.item = null;
+    this.number = null;
     this.right = null;
     this.left = null;}
 
@@ -11,15 +11,15 @@ class GuessingGame {
 
     }
 
-    guess() { this.item = Math.round(max-min)/2;
-                return this.item;
+    guess() { this.number = Math.round((this.right-this.left)/2);
+                return this.number;
     }
 
-    lower() { this.setRange (this.left, this.item)
+    lower() { this.setRange(this.left, this.number);
 
     }
 
-    greater() { this.setRange(this.item, this.right)
+    greater() { this.setRange(this.number, this.right);
 
     }
 }
