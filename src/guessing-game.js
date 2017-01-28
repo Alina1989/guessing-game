@@ -5,14 +5,14 @@ class GuessingGame {
     this.left = null;}
 
     setRange(min, max) {
-        this.item = (min+max)/2
-        this.left = min+1;
-        this.right = max-1;
+        
+        this.left = min;
+        this.right = max;
 
     }
 
-    guess() {
-return this.item;
+    guess() { this.item = Math.round(max-min)/2;
+                return this.item;
     }
 
     lower() { this.setRange (this.left, this.item)
