@@ -11,7 +11,7 @@ class GuessingGame {
 
     }
 
-    guess() { this.number = Math.round((this.right-this.left)/2);
+    guess() { this.number = Math.round((this.right+this.left)/2);
                 return this.number;
     }
 
@@ -22,6 +22,8 @@ class GuessingGame {
     greater() { this.setRange(this.number, this.right);
 
     }
+
+
 }
 
 module.exports = GuessingGame;
